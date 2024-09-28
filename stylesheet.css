@@ -1,0 +1,245 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: sans-serif;
+    text-decoration: none;
+    
+}
+
+body{
+    height: 100vh;
+    text-align: center;
+    padding: 2rem;
+    
+
+}
+.logo{
+    display: flex;
+    gap: 1rem;
+    float: left;
+}
+.logoicon{
+    height: 60px;
+}
+
+.logotext{
+    background-image: linear-gradient(60deg,#CB218E ,#6617CB );
+    background-clip: text;
+    color: transparent;
+    font-size: 2.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+.nav{
+    display: flex;
+    gap: 2.5rem;
+
+}
+.navlink{
+    font-size: xx-large;
+    color: #3E2180;
+    font-weight: 600;
+    transform: color 0.1s;
+}
+.navlink:hover{
+    color:#CB218E
+}
+.contact-button{
+    display: none;
+    font-size: 1.5rem;
+    color:aliceblue;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.35rem;
+    background-image: linear-gradient(60deg,#CB218E ,#6617CB );
+    transform: all 0.1s;
+    padding: 1rem;
+}
+.contact-button:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (min-width:768px) {
+    .contact-button{
+        display: block;
+    }
+
+}
+.header-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-section{
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0.6rem;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.content-left{
+    text-align: center;
+    animation: slideFromLeft 1s ease forwards ;
+    opacity: 0;
+    
+}
+
+@keyframes slideFromLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+
+    }
+}
+
+.section-label{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: blueviolet;
+
+
+}
+
+.section-title{
+    font-size: 2.3rem;
+    padding: 1.1rem ;
+    color: black;
+}
+
+.section-description{
+    color: grey;
+    font-size: 1.13rem;
+    gap: 0.5;
+
+}
+
+a.start-button, a.tour-button {
+    display: inline-block; /* Ensures the anchor tags behave like buttons */
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.35rem;
+    background-image: linear-gradient(60deg, #CB218E, #6617CB);
+    transition: all 0.1s ease; /* Changed 'transform' to 'transition' for smoother animation */
+    padding: 1rem;
+    text-decoration: none; /* Removes underline from anchor tags */
+    color: white; /* Sets text color to white */
+}
+
+a.start-button:hover, a.tour-button:hover {
+    transform: scale(1.1);
+}
+
+.button-group{
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.content-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+.image-container{
+    border-radius: 0.625;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1, green, blue, alpha);
+    height: 200vh;
+}
+.section-image {
+    height: 100%; /* Set the height of the image to cover the entire section */
+    width: 100%; /* Set the width of the image to cover the entire section */
+    object-fit: cover; /* Ensure the image covers the entire space without distortion */
+}
+
+
+@media screen and (min-width: 768px){
+    .main-section{
+        flex-direction: row;
+    }
+    .content-left{
+        max-width: 50%;
+        text-align: left;
+
+    }
+    .section-title{
+        padding-left: 0;
+    }
+    .button-group{
+        justify-content: start;
+        padding-left: 0;
+    }
+    .section-label{
+        font-size: 2rem;
+    }
+    .section-title{
+        font-size: 4rem;
+    }
+    .section-description{
+        font-size: 1.5rem;
+    }
+    /* .image-container{
+        height: 70vh;
+    } */
+}
+
+.company-container{
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; */
+    margin-top:2rem ;
+
+    animation: slideFromLeft 1s ease forwards;
+    
+}
+@media screen and (min-width:640px) {
+    .company-grid{
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    
+}
+
+
+.company-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* You can adjust the number of columns as per your requirement */
+    grid-template-rows: 1fr; /* Set to a single row */
+    gap: 3rem;
+    padding: 1rem;
+    background-color: white;
+    color: black;
+}
+
+.company-logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 500;
+    
+}
+.companyimg{
+    height: 2rem;
+}
+.trusted{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.logo-text{
+    font-size: 1.5rem;
+    font-weight: 600;
+    
+
+}
